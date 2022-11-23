@@ -10,3 +10,5 @@ streamlit.text('Poori')
 streamlit.text('🥗🥣 vegetable soup')
 streamlit.text('🐔🥣 chicken soup')
 streamlit.text('🍞 toast')
+
+streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
