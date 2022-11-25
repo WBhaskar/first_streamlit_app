@@ -40,6 +40,6 @@ streamlit.text("Snowflake Account Details:")
 streamlit.text(my_data_row)
 
 my_cur.execute("Select * From fruit_load_list")
-my_data_row = my_cur.fetchone()
+my_data_rows = my_cur.fetchall()
 streamlit.header("List of Fruits loaded in snowflake:")
-streamlit.dataframe(my_data_row)
+streamlit.dataframe(my_data_rows)
