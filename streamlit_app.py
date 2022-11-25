@@ -44,8 +44,8 @@ except URLError as e:
   
 def add_fruit(newfruit):
   with my_cnx.cursor() as my_cur1:
-    my_cur1.execute("Insert Into fruit_load_list values ('newfruit')")
-    return "Added new fruit successfully"
+    my_cur1.execute("Insert Into fruit_load_list values ('"+newfruit+"')")
+    return "Added "+newfruit+" successfully"
 
 new_fruit_choice = streamlit.text_input('What fruit would you like to add?')
 if streamlit.button('Add Fruit'):
@@ -53,7 +53,6 @@ if streamlit.button('Add Fruit'):
   back_from_add_function = add_fruit(new_fruit_choice)
   streamlit.text(back_from_add_function)
 
-streamlit.stop()
 def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:
     my_cur.execute("Select * From fruit_load_list")
