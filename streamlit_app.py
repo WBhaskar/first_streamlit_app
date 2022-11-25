@@ -58,7 +58,7 @@ if streamlit.button('Get Fruit List'):
     new_fruit_choice = streamlit.text_input('What fruit would you like to add?')
     if not new_fruit_choice:
      streamlit.error("Please type a fruit.")
-  else:
-    back_from_add_function = add_fruit(new_fruit_choice)
-    streamlit.text(back_from_add_function)
+    else:
+      back_from_add_function = add_fruit(new_fruit_choice)
+      streamlit.text(back_from_add_function)
 
