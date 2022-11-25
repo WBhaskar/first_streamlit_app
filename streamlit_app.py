@@ -44,7 +44,7 @@ def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:
     my_cur.execute("Select * From fruit_load_list")
     return my_cur.fetchall()
-def add_fruit(newfruit)
+def add_fruit(newfruit):
   with my_cnx.cursor() as my_cur:
     my_cur.execute("Insert Into fruit_load_list values ("+ newfruit +")")
     return "Added" + newfruit + "successfully"
